@@ -1,8 +1,7 @@
 abstract class Bank
 {
-void withdraw()
+    void withdraw()
 {
-
     System.out.println("Amount withdraw");
 }
 void deposit()
