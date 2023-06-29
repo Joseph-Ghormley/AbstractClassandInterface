@@ -2,34 +2,36 @@ public class Main
 {
     public static void main(String[] args)
     {
-
-        PNC pncAccount = new PNC();
+        System.out.println("Transaction Details Using Abstract Class");
+        System.out.println("------------------------------------------");
         System.out.println("PNC BANK TRANSACTION");
-        pncAccount.deposit(); // Depositing into PNC account
-        pncAccount.withdraw(); // Withdrawing from PNC account
-        pncAccount.calculateInterest(); // Calculating interest for PNC account
-        System.out.println();
-
-        AMT amtAccount = new AMT();
+        Bank bank = new PNC();
+        bank.deposit();
+        bank.withdraw();
+        bank.calculateInterest();
+        System.out.println("--------------------------------");
         System.out.println("AMT BANK TRANSACTION");
-        amtAccount.deposit(); // Depositing into AMT account
-        amtAccount.withdraw(); // Withdrawing from AMT account
-        amtAccount.calculateInterest(); // Calculating interest for AMT account
-        System.out.println();
-
-        BankInterface boaAccount = new BOA();
-        boaAccount.BOA();
-        boaAccount.calculateInterest();
-        System.out.println();
-
-        BankInterface chaseAccount = new Chase_Bank();
-        chaseAccount.Chase_bank();
-        chaseAccount.calculateInterest();
-
-
-
-
-
-
+        bank = new AMT();
+        bank.deposit();
+        bank.withdraw();
+        bank.calculateInterest();
+        System.out.println("------------------------------------------");
+        System.out.println("End of Abstract Class");
+        System.out.println("------------------------------------------");
+        System.out.println("Transaction Details Using INTERFACE");
+        System.out.println("------------------------------------------");
+        BankInterface b1 = new BOA();
+        b1.deposite();
+        b1.withdraw();
+        b1.calculateInterest();
+        System.out.println("------------------------------------------");
+        System.out.println("Chase BANK TRANSACTION");
+        b1 = new Chase();
+        b1.deposite();
+        b1.withdraw();
+        b1.calculateInterest();
+        System.out.println("---------------------------------");
+        System.out.println("End of INTERFACE");
+        System.out.println("------------------------------------------");
     }
 }
